@@ -12,12 +12,12 @@ CPP_LIBRARY(
 )
 
 
-#CPP_BINARY(
-#  NAME      base64_test
-#  SOURCES   base64_test.cpp   
-#  PACKAGES  //base64:base64                        
-#  TEST_SIZE small
-#)           
+CPP_BINARY(
+  NAME      base64_test
+  SOURCES   base64_test.cpp   
+  PACKAGES  //base64:base64                        
+  TEST_SIZE small
+)           
 
-#
+
 

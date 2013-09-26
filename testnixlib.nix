@@ -20,4 +20,10 @@ stdenv.mkDerivation {
     cmake -DSNAP_INSTALL_PREFIX=$out ..;       
   '';  
   
+  # just copy the whole temp build directory to store... we will want all the binaries, all the generated sources, all the static headers and sources...
+  # perhaps there is a bunch of cmake stuff we could filter out... is it worth it?    
+  installPhase = ''
+    cp -r ../ $out   
+  '';  
+  
 }
